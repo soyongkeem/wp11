@@ -85,7 +85,7 @@
       z-index: 999;
       backdrop-filter: blur(10px);
       padding: 1rem 2rem;
-      margin-bottom: 0;  /* 혹시라도 들어있을 여백 제거 */
+      margin-bottom: 0; 
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -112,7 +112,7 @@
         }
 
         nav ul li a.active {
-          color: #20d300; /* 강조 색상 */
+          color: #24ee00;
         }
 
 
@@ -304,7 +304,7 @@
     </div>
   </section>
 
-<section id="structure" style="background-color: white;">
+<section style="background-color: white;">
     <div class="wrap">
       <table>
         <tr><th>층위</th><th>질문</th><th>문제의식이 던지는 질문</th></tr>
@@ -315,7 +315,7 @@
     </div>
   </section>
 
-<section id="conclusion">
+<section>
   <div class="wrap-green center-content">
     <p style="color: #000;">
       이렇게 불안정한 디지털 현실 속에서<br>
@@ -326,7 +326,7 @@
 </section>
 
 
-<footer id="footer">
+<footer>
   <p>© 2025 LOST MEDIA. 김서영 All rights reserved.</p>
 </footer>
 
@@ -353,7 +353,7 @@
       }
     });
 
-    // ✅ nettrain 도달 시에도 application 항목 유지
+
     const nettrain = document.getElementById("nettrain");
     if (
       nettrain &&
@@ -363,12 +363,11 @@
       currentId = "application";
     }
 
-    // ✅ 푸터 도달 시에도 application 항목 유지
     if (footer && scrollY + window.innerHeight >= footer.offsetTop) {
       currentId = "application";
     }
 
-    // ✅ nav 메뉴 active 상태 적용
+
     navLinks.forEach((link) => {
       link.classList.remove("active");
       if (link.getAttribute("href") === `#${currentId}`) {
